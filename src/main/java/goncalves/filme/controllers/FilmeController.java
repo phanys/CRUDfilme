@@ -17,7 +17,7 @@ public class FilmeController {
     private FilmeService filmeService;
 
     @GetMapping
-    private ResponseEntity<List<FilmeModel>> findAll(){
+    public ResponseEntity<List<FilmeModel>> findAll(){
         List<FilmeModel> response = filmeService.findAll();
         return ResponseEntity.ok().body(response);
 
